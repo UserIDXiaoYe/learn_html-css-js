@@ -1,0 +1,32 @@
+body{
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    height: 100vh;
+    overflow: hidden;
+}
+.btn{
+    background-color: yellow;
+    box-shadow: 1px 3px gray;
+    border: none;
+
+    position: fixed;
+    top: 10px;
+}
+.btn:active{
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+.boxes{
+    background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+    height: 500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    justify-content: space-around;
+}
