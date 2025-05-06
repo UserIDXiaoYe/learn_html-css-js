@@ -23,10 +23,31 @@ body{
 }
 
 .boxes{
-    background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+    /* background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif'); */
+    display: flex;
+    flex-wrap: wrap;
     height: 500px;
     width: 500px;
     background-repeat: no-repeat;
     background-size: 500px 500px;
     justify-content: space-around;
 }
+/* 当添加.big类时，宽度和高度改变 模拟分裂效果 */
+.boxes.big{
+    width: 600px;
+    height: 600px;
+  }
+  .boxes.big .box {
+    transform: rotateZ(360deg);
+  }
+  .box{
+    background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif'); 
+    background-repeat: no-repeat; 
+    background-size: 500px 500px; 
+    /* 相对定位，作为伪元素绝对定位的参考 */
+    position: relative; 
+    /* 元素高度为125px 实现裁剪效果 */
+    height: 125px; 
+    width: 125px; 
+    transition: 0.4s ease; /* 添加过渡动画，持续0.4秒，缓动效果 */
+  }
