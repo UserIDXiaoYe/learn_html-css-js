@@ -1,0 +1,95 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.container button,.container a{
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    /* margin: 10px; */
+    cursor: pointer;
+    border-radius: 5px;
+}
+.first{
+    position: relative;
+    border: none;
+    border-radius: 5px;
+}
+.first::before{
+    height: 0px;
+    width:  0px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    border-width: 0;
+    border-style: solid;
+    content: "";
+
+    border-color: 
+    #000 
+    rgba(255,255,255,0.3) 
+    rgba(255,255,255,0.3) 
+    #000;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    transition: all 0.2s;
+    border-bottom-right-radius: 5px;
+}
+.first:hover::before{
+    border-width: 20px;/* 调整这个值可以改变折角大小 */
+}
+.fourth{
+    border-radius: 5px;
+    box-shadow: 2px 2px gray;
+}
+.fourth:active{
+    box-shadow: none;
+    transform: translateY(2px);
+}
+:root {
+    --hue: 90; /* 基础色相（黄绿色系） */
+}
+.glow-btn {
+    position: relative;
+    /*  */
+    color: rgba(188, 56, 56, 0.3);
+    /* 取消a标签默认的下划线 */
+    text-decoration: none;
+    /* 指定如何将元素的文本大写:全部大写 */
+    text-transform: uppercase;
+
+    border: 2px solid gray;
+    transition: all 0.2s;
+    transition-delay: 0s, 1s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.glow-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 0;
+    height: 100%;
+    background: rgba(188, 56, 56, 0.3);
+    transform: skewX(36deg);
+    transition: 1s;
+    z-index: -1;
+}
+  
+.glow-btn:hover {
+color: #fff;
+box-shadow: 
+    0 0 10px rgba(88, 152, 171, 0.3),
+    0 0 20px rgba(88, 152, 171, 0.3),
+    0 0 30px rgba(88, 152, 171, 0.3),
+    0 0 50px rgba(88, 152, 171, 0.3);
+}
+
+.glow-btn:hover::before {
+width: 150%;
+}

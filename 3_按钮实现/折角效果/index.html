@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 折角效果</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            background: #3498db;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-width: 0;
+            border-style: solid;
+            border-color: #791b1b rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.3) #791b1b;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .box:hover::before {
+            border-width: 30px;
+            /* 调整这个值可以改变折角大小 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

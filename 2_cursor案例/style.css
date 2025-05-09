@@ -1,0 +1,64 @@
+/* body {
+    cursor: url('./duck2.png'), auto;
+} */
+.animated-cursor {
+    cursor: none; 
+}
+#cursor-follower {
+    position: absolute;
+    pointer-events: none; /* 不干扰鼠标事件 */
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url('./duck.gif'); /* 使用原始GIF */
+    background-size: contain;
+}
+.container{
+    /* cursor: url('./duck2.png'), auto; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
+.container :first-child{ 
+    width: 100%; 
+    height: auto; 
+    background-color: aqua;
+}
+.container :nth-child(n+2){
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    border: 4px solid skyblue;
+}
+.pointer{
+    cursor: pointer;
+}
+.help{
+    cursor: help;
+}
+.wait{
+    cursor: wait;
+}
+.crosshair{
+    cursor: crosshair;
+}
+.auto{
+    cursor: auto;
+}
+.copy{
+    cursor: copy;
+}
+.zoom-in{
+    cursor: zoom-in;
+}
+.zoom-out{
+    cursor: zoom-out;
+}
+.grab{
+    cursor: grab;
+}
